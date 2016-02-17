@@ -52,9 +52,9 @@ CREATE TABLE `urls` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `long_url` varchar(255) NOT NULL,
   `short_url` varchar(50) NOT NULL,
-  `date_created` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -63,7 +63,7 @@ CREATE TABLE `urls` (
 
 LOCK TABLES `urls` WRITE;
 /*!40000 ALTER TABLE `urls` DISABLE KEYS */;
-INSERT INTO `urls` VALUES (1,'http://google.com','http://up.up/c207ac16','0000-00-00 00:00:00'),(3,'http://upwork.com','c-m','0000-00-00 00:00:00'),(4,'http://christian-mcarthur.com','http://up.up/c-m','0000-00-00 00:00:00'),(5,'http://upwork.com','http://up.up/ba43ffc7','0000-00-00 00:00:00');
+INSERT INTO `urls` VALUES (1,'http://google.com','http://up.up/c207ac16','0000-00-00 00:00:00'),(3,'http://upwork.com','c-m','0000-00-00 00:00:00'),(4,'http://christian-mcarthur.com','http://up.up/c-m','0000-00-00 00:00:00'),(5,'http://upwork.com','http://up.up/ba43ffc7','0000-00-00 00:00:00'),(6,'http://google.com/webmaster/tools','http://up.up/600dae50','2016-02-17 16:44:55');
 /*!40000 ALTER TABLE `urls` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -76,4 +76,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-01-31 11:18:53
+-- Dump completed on 2016-02-17 11:15:51
