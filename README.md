@@ -2,7 +2,7 @@
 Simple project to create short URLs
 
 ## About
-This project was used as a coding test, the details of which can be found below.  This was a timed test with a maximum of three hours.  The initial commit of this code is what I wrote at the end of those three hours.  Commits beyond the initial one is progress I'm making to clean up and finish the code.
+This project was used as a coding test, the details of which can be found below.  This was a timed test with a maximum of three hours. The initial commit of this code is what I wrote at the end of those three hours.  Commits beyond the initial one is progress I'm making to clean up and finish the code.
 
 **This is a quick and dirty web project that will:**
   * Shorten a valid URL provided by the user.
@@ -16,8 +16,11 @@ This project was used as a coding test, the details of which can be found below.
   * form.view.php: View containig forms for performing the options listed above.
   * functions.php: File containing functions to clean up index.php and attempt at modularization
   * index.php: Index file... users should be directed to this page via web browser
+ 
+## Design Decisions
+I made the decision to develop this code using native PHP (no frameworks like CodeIgniter or Laravel) for several reasons.  Since the code needed to be extremely portable so that the code reviewers could examine the source and, potentially, demo the website, a heavy framework like Laravel was undesirable.  Also, the project did not appear to be complex enough to requrie an MVC framework at all.  Therefore I chose to develop in native PHP.  The codebase could be cleaner and more organized using a framework, but time and size was of the essence.
 
-**NOTES:**
+## NOTES:
   * Items not currently implemented:
   	 * Redirection of short URL.  Due to using an invalid domain name for the shortened
   	 	form of the URL in config.php, attempting redirection of the shortened URL is 
