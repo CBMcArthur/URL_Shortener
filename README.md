@@ -5,12 +5,14 @@ Simple project to create short URLs
 This project was used as a coding test, the details of which can be found below.  This was a timed test with a maximum of three hours. The initial commit of this code is what I wrote at the end of those three hours.  Commits beyond the initial one is progress I'm making to clean up and finish the code.
 
 **This is a quick and dirty web project that will:**
-  * Shorten a valid URL provided by the user.
-  * Create a shortened URL specified by the user for a valid URL provided by the user.
+  * Shorten a valid URL provided by the user
+  * Create a shortened URL specified by the user for a valid URL provided by the user
   * Allow a user to look up a shortened URL
+  * Provide a mechanism for cleaning up old shortened URLs
 
 **Files:**
   * create_db.sql: SQL script to create the DB tables and example data.
+  * cleanup.php: PHP-based cron script to clean up `urls` DB table.
   * config.php: A small configuration file for DB and URL shortening settings.  
   * display_url.view.php: View after after the form contents are processed successfully.
   * form.view.php: View containig forms for performing the options listed above.
@@ -27,9 +29,6 @@ I take the full URL, as a string provided by the user, and get the SHA1 hash of 
 
 There is a potential problem with this method of generating short URLs.  There is the possibility that the selected substring of two SHA1 hashes could be identical.  This will require some change to the shortened URL which is not currently implemented.
 
-## NOTES:
-  * Items not currently implemented:
-  	 * Redirection of short URL.  Due to using an invalid domain name for the shortened
-  	 	form of the URL in config.php, attempting redirection of the shortened URL is 
-  	 	useless.  Instead a look-up form is provided to get the full URL from the
-  	 	shortened form.
+## Items not currently implemented:
+ * Redirection of short URL.  Due to using an invalid domain name for the shortened form of the URL in config.php, attempting redirection of the shortened URL is useless.  Instead a look-up form is provided to get the full URL from the shortened form.
+ * Logging. The original project had a bonus requirement of logging actions taken with this app.  An initial DB has been created, but no events are currently being logged.
